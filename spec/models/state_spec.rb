@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Keyword do
+describe State do
   context 'Accessors' do
     it { should allow_mass_assignment_of(:name) }
   end
@@ -11,6 +11,6 @@ describe Keyword do
 
   context 'Associations' do
     it { should have_many(:targets) }
-    it { should have_many(:states).through(:targets) }
+    it { should have_many(:keywords).through(:targets) }
   end
 end
