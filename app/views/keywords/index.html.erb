@@ -2,14 +2,23 @@
 
 <table>
   <tr>
-    <th></th>
+    <th>name</th>
+    <th>states</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @keywords.each do |keyword| %>
   <tr>
-    <td><%= link_to 'Show', keyword %></td>
+    <td><%= link_to keyword.name, keyword %></td>
+    <td>
+      <ul>
+          <% keyword.states.each do |state| %>
+            <li><%= state.name %></li>
+          <% end -%>
+      </ul>
+
+    </td>
     <td><%= link_to 'Edit', edit_keyword_path(keyword) %></td>
     <td><%= link_to 'Destroy', keyword, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

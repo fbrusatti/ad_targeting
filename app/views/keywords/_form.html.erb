@@ -13,10 +13,10 @@
     </div>
   <% end %>
 
-  First name: <%= f.text_field :name %><br />
+  Name: <%= f.text_field :name %><br />
 
-  States : <%= f.select :states,
-                        region_options_for_select(Carmen::Country.coded('US').subregions),
+  States : <%= f.select :state_ids,
+                        options_from_collection_for_select(State.all, 'id', 'name', @keyword.states.map(&:id)),
                         {prompt: 'Please select US States'},
                         { multiple:true, size: 20} %><br />
 

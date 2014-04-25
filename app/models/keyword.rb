@@ -1,6 +1,6 @@
 class Keyword < ActiveRecord::Base
   # == Accessors
-  attr_accessible :name
+  attr_accessible :name, :state_ids
 
   # == Associations
   has_many :targets

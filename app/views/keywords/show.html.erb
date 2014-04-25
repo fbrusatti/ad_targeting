@@ -1,5 +1,29 @@
 <p id="notice"><%= notice %></p>
 
+<table>
+  <tr>
+    <th>name</th>
+    <th>states</th>
+  </tr>
+
+  <tr>
+    <td><%= link_to @keyword.name, @keyword %></td>
+    <td>
+      <ul>
+          <% @keyword.states.each do |state| %>
+            <li><%= state.name %></li>
+          <% end -%>
+      </ul>
+
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<%= link_to 'New Keyword', new_keyword_path %>
+
+
 
 <%= link_to 'Edit', edit_keyword_path(@keyword) %> |
 <%= link_to 'Back', keywords_path %>
