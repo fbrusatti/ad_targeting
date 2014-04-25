@@ -69,7 +69,11 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.3)
     hike (1.2.3)
+    httpclient (2.3.4.1)
     i18n (0.6.9)
+    impressionist (1.5.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.5)
     journey (1.0.4)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
@@ -168,6 +172,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   database_cleaner
   factory_girl_rails
+  impressionist
   jquery-rails
   pg
   rails (= 3.2.15)
