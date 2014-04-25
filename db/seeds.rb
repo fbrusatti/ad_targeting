@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Carmen::Country.coded('US').subregions.map(&:name).each do |state_name|
+  State.create(name: state_name)
+end
