@@ -1,4 +1,8 @@
 AdTargeting::Application.routes.draw do
+  root :to => 'keywords#index'
+
+  resources :keywords
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
