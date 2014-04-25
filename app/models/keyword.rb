@@ -8,4 +8,6 @@ class Keyword < ActiveRecord::Base
 
   # == Validations
   validates :name, presence: true
+
+  is_impressionable
 end
