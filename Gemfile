@@ -20,8 +20,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :test do
+  gem 'rspec-rails', '~> 2.4'
+  gem "shoulda-matchers"
+  gem 'factory_girl_rails'
+  gem 'capybara', '2.0.2'
+  gem 'capybara-webkit', '~> 1.1.0'
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
+end
 
+gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
