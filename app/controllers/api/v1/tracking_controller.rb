@@ -4,13 +4,13 @@ class Api::V1::TrackingController < ApplicationController
     @keyword = Keyword.find(params[:id])
     impressionist(@keyword)
 
-    render json: @keyword.attributes.merge(impressions_counts: @keyword.impressionist_count)
+    render json: @keyword.attributes.merge(impressions_counts: @keyword.impressions_count)
   end
 
   def click
     @keyword = Keyword.find(params[:id])
     impressionist(@keyword, message: 'click')
 
-    render json: @keyword.attributes.merge(click_counts: @keyword.impressions.where("message like '%click%'").count)
+    render json: @keyword.attributes.merge(click_counts: @keyword.clicks_count)
   end
 end

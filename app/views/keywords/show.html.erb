@@ -20,9 +20,9 @@
 
     </td>
 
-    <td><%= @keyword.impressionist_count %></td>
+    <td><%= @keyword.impressions_count %></td>
 
-    <td><%= @keyword.impressions.where("message like '%click%'").count %></td>
+    <td><%= @keyword.clicks_count %></td>
 
     <td><%= @keyword.click_rate %> </td>
   </tr>
