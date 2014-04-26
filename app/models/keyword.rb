@@ -10,4 +10,10 @@ class Keyword < ActiveRecord::Base
   validates :name, presence: true
 
   is_impressionable
+
+  # == Instance Methods
+  def click_rate
+    return 0 if impressionist_count == 0
+    (impressions.where("message like '%click%'").count.to_f / impressionist_count).round(2)
+  end
 end

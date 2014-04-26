@@ -4,6 +4,9 @@
   <tr>
     <th>name</th>
     <th>states</th>
+    <th>impressions</th>
+    <th>clicks</th>
+    <th>click rates</th>
   </tr>
 
   <tr>
@@ -16,6 +19,12 @@
       </ul>
 
     </td>
+
+    <td><%= @keyword.impressionist_count %></td>
+
+    <td><%= @keyword.impressions.where("message like '%click%'").count %></td>
+
+    <td><%= @keyword.click_rate %> </td>
   </tr>
 </table>
 

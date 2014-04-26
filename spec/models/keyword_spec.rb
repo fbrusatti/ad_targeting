@@ -14,4 +14,10 @@ describe Keyword do
     it { should have_many(:targets) }
     it { should have_many(:states).through(:targets) }
   end
+
+  context 'Instance methods' do
+    context '#click_rate' do
+       # todo
+    end
+  end
 end
